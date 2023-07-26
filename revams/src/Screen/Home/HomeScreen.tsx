@@ -1,21 +1,24 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 export default function AboutScreen({route}) { 
     let dataObj = route.params
   
     return ( 
-      <View style={styles.container}> 
-        <Text style={styles.paragraph}> 
-          This is the About Screen of HELLO WORLD!!! 
-        </Text> 
-      </View> 
+        <SafeAreaProvider>
+            <View style={styles.container}> 
+                <Text style={styles.paragraph}> 
+                This is the About Screen of HELLO WORLD!!! 
+                </Text> 
+            </View> 
+        </SafeAreaProvider>
     );
   }
 
   const styles = StyleSheet.create({
     container: {
-      marginTop: 50,
+      marginTop: 0,
     },
     paragraph: {
         color: "#FF0000",

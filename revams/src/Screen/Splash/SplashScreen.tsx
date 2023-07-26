@@ -9,7 +9,7 @@ export default function HomeScreen({navigation}) {
       <View style={styles.container}> 
         <Button 
           title="Go to About" 
-          onPress={() => navigation.navigate('HomeScreen')} 
+          onPress={() => navigation.reset({ index: 0, routes: [{ name: 'HomeScreen' }] })} 
         /> 
       </View> 
     );
